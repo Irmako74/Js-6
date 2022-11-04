@@ -50,27 +50,27 @@
 //         name: pName,
 //         age: pAge,
 //         displayInfo: function(){
-//         document.write("saxeli" + this.name + "asaki" + this.age)
+//         document.write("Name" + this.name + "Age" + this.age)
 //         }
 //     };
 // };
 
-// var tom = createUser("tom", 26);
+// var tom = createUser("Giorgi", 26);
 // tom.displayInfo()
 
 //Constructors ობიექტის კონსტრუქტორი
-var tom = new Object();
+// var Giorgi = new Object();
 
-function User (pName, pAge) {
-    this.name = pName;
-    this.age = pAge;
-    this.displayInfo = function(){
-        document.write("saxeli" + this.name + "asaki" + this.age)
-    }
-}
-var tom = new User ("tom", 26)
+// function User (pName, pAge) {
+//     this.name = pName;
+//     this.age = pAge;
+//     this.displayInfo = function(){
+//         document.write("saxeli" + this.name + "asaki" + this.age)
+//     }
+// }
+// var tom = new User ("Giorgi", 26)
 
-document.write(tom.name)
+// document.write(tom.name, tom.age)
 
 
 
@@ -79,27 +79,27 @@ document.write(tom.name)
 //     this.name = mName;
 //     this.year = mYear;
 //     this.getCarInfo = function() {
-//         document.write("model" + this.name + "gamoshvebis werli" + this.year)
+//         document.write("model" + this.name + "date of issue" + this.year)
 //     }
 // }
 
-// //User type
+// // //User type
 // function User (pName, pAge) {
 //     this.name = pName;
 //     this.age = pAge;
 //     this.driveCar = function(car) {
-//         doocument.write(this.name + "atarebs" + car.name + car.year)
+//         document.write(this.name + "Drive" + car.name + car.year)
 //     };
 //     this.displayInfo = function (){
-//         document.write("saxeli" + this.name + "asaki" +this.age)
+//         document.write("Name" + this.name + "Year" +this.age)
 //     }
 // }
 
-// var tom = new User ("tom", 26);
+// var tom = new User ("Irma", 26);
 // tom.displayInfo();
 
-// var lada = new Car ("lada",1800);
-// tom.driveCar(lada)
+// var Mitsubishi = new Car ("Mitsubishi",2022);
+// tom.driveCar(Mitsubishi)
 
 
 //Prototype
@@ -185,22 +185,21 @@ document.write(tom.name)
 
 // User.prototype.maxage = 110;
 
-// function Employee 
-// (name, age, company) {
-//     User.call(this.name,age);
-//     this.company = company;
-//     this.displayInfo = function() {
-//       document.write("saxeli" + this.name + "asaki" + this.age + "company" + this.company);
-//     }
-// }
+function Employee (name, age, company) {
+    User.call(this.name,age);
+    this.company = company;
+    this.displayInfo = function() {
+      document.write("saxeli" + this.name + "asaki" + this.age + "company" + this.company)
+    }
+}
 
-// Employee.prototype = Object.create(User.prototype);
+Employee.prototype = Object.create(User.prototype);
 
-// var tom = new User("tom", 28)
-// var bill = new Employee ("bill", 25, "Google");
+var tom = new User("tom", 28)
+var bill = new Employee ("bill", 25, "Google");
 
-// tom.displayInfo()
-// bill.displayInfo()
+tom.displayInfo()
+bill.displayInfo()
 
 
 // function add (x,y) {
