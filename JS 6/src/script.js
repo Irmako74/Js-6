@@ -172,34 +172,97 @@
 
 //momxmarebeli
 
-// function User (name, age) {
+// function User (name, age,company) {
 //     this.name = name;
 //     this.age = age;
-//     this.go - function (){
-//         document.write(this.name + "goes")
-//     };
-//     this.displayInfo = function(){
-//         document.write("saxeli" + this.name + "asaki" + this.age);
+//     this.company = company;
+//     this.displayInfo = function() {
+//         document.write("Name" + this.name + "Year" + this.age+ "company" + this.company);
 //     }
 // }
 
 // User.prototype.maxage = 110;
 
-function Employee (name, age, company) {
-    User.call(this.name,age);
-    this.company = company;
-    this.displayInfo = function() {
-      document.write("saxeli" + this.name + "asaki" + this.age + "company" + this.company)
-    }
-}
+// function Employee( name,age,company) {
+//     this.name = name;
+//     this.age = age;
+//     this.company = company;
+//     this.displayInfo = function() {
+//       document.write("Name" + this.name + "Year" + this.age + "company" + this.company);
+//     }
+// }
 
-Employee.prototype = Object.create(User.prototype);
+// Employee.prototype = Object.create(User.prototype);
 
-var tom = new User("tom", 28)
-var bill = new Employee ("bill", 25, "Google");
+// var irma = new User("Irma", 30, "TBC")
+// var giorgi = new Employee ("Giorgi", 25, "Google");
 
+// // tom.go()
+// // bill.go()
+
+// irma.displayInfo()
+// giorgi.displayInfo()
+
+// //mankana
+// function User (name, age,car) {
+//     this.name = name;
+//     this.age = age;
+//     this.car = car;
+//     this.displayInfo = function() {
+//         document.write("Name" + this.name + "Year" + this.age+ "car" + this.car);
+//     }
+// }
+
+// User.prototype.maxage = 110;
+
+// function Employee( name,age,car) {
+//     this.name = name;
+//     this.age = age;
+//     this.car = car;
+//     this.displayInfo = function() {
+//       document.write("Name" + this.name + "Year" + this.age + "car" + this.car);
+//     }
+// }
+
+// Employee.prototype = Object.create(User.prototype);
+
+// var irma = new User("Irma", 30, "Mitsubishi")
+// var giorgi = new Employee ("Giorgi", 25, "BMW");
+
+
+
+// irma.displayInfo()
+// giorgi.displayInfo()
+
+
+function createUser(pName,pAge,pcar) {
+    return{
+        name: pName,
+        age: pAge,
+        car: pcar,
+        displayInfo: function(){
+        document.write("Name" + this.name + "Age" + this.age + "Car" + this.car)
+        }
+    };
+};
+
+var tom = createUser("Giorgi", 26, "BMW");
 tom.displayInfo()
-bill.displayInfo()
+
+
+// var Giorgi = new Object();
+
+// function User (pName, pAge) {
+//     this.name = pName;
+//     this.age = pAge;
+//     this.displayInfo = function(){
+//         document.write("saxeli" + this.name + "asaki" + this.age)
+//     }
+// }
+// var giorgi = new User ("Giorgi", 26)
+
+// document.write(giorgi.name, giorgi.age)
+
 
 
 // function add (x,y) {
